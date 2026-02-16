@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Desai Portfolio</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+    
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav h2 {
+            color: orangered;
+            font-family: "Oswald";
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: orangered;
+            left: 0;
+            bottom: -5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO */
+
+            /* .hero {
+                height: 100vh;
+                background:url('image/Meet_Pro1.jpeg') no-repeat center center/cover, 
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+                background-position: 0px 0px;
+                background-position: center -300px;
+                display: flex;
+                align-items: center;
+                padding-left: 8%;
+            } */
+/* .hero {
+    height: 100vh;
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                url('image/Meet_Pro.jpeg') no-repeat center center;
+    background-size: contain;   
+    background-color: #111;      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+    padding-left: -8%;
+} */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    background: #111;
+}
+
+/* LEFT SIDE */
+
+.hero-left {
+    width: 50%;
+    color: white;
+}
+
+/* RIGHT SIDE */
+
+.hero-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-right img {
+    width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+        .intro h1 {
+            font-size: 65px;
+            font-family: "Oswald";
+            color: orangered;
+        }
+
+        .intro p {
+            max-width: 500px;
+            margin: 20px 0;
+        }
+
+        /* BUTTONS */
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin: 10px 10px 0 0;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: orangered;
+            color: white;
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* TITLES */
+
+        .section-title {
+            text-align: center;
+            font-size: 45px;
+            font-family: "Oswald";
+            margin-bottom: 40px;
+            color: orangered;
+        }
+
+        /* RESUME */
+
+        .resume {
+            background: #1a1a1a;
+        }
+
+        .resume-item {
+            background: #222;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 5px solid orangered;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            background: #1a1a1a;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            color: #333;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* SKILLS */
+
+        .skills {
+            background: #1a1a1a;
+        }
+
+        .skills-wrapper {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill-name {
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 10px;
+            background: #333;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, orangered, #ff7a18);
+            border-radius: 20px;
+            transition: width 1s ease;
+        }
+
+
+        /* ABOUT */
+
+        .about {
+            background: #1a1a1a;
+        }
+
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            background: #222;
+        }
+
+        .contact-wrapper {
+            /* display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px; */
+        }
+
+        .site-form input,
+        .site-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+        }
+.site-contact-details {
+    background: #1a1a1a;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+     text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+        .site-contact-details li {
+            margin-bottom: 10px;
+            
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* MOBILE */
+
+        /* @media(max-width:768px) {
+
+            .intro h1 {
+                font-size: 40px;
+            }
+
+            .about-wrapper,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <h2>Meet</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <!-- <div class="hero" id="home">
+        <div class="intro">
+            <h1>I'm Meet Desai</h1>
+            <p>Passionate Full Stack Developer skilled in Java, Web Technologies, and building responsive modern
+                applications.</p>
+            <a href="#about" class="btn btn-primary">About Me</a>
+        </div>
+    </div> -->
+    <div class="hero" id="home">
+
+    <div class="hero-left">
+        <div class="intro">
+            <h1>I'm Meet Desai</h1>
+            <p>
+                Passionate Full Stack Developer skilled in Java, Web Technologies,
+                and building responsive modern applications.
+            </p>
+
+            <a href="#about" class="btn btn-primary">About Me</a>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <img src="image/Meet_Pro1.jpeg" alt="Meet Desai">
+    </div>
+
+</div>
+
+    <!-- RESUME -->
+
+    <section class="resume" id="resume">
+        <h2 class="section-title">Education</h2>
+
+        <div class="resume-item">
+            <span>2023</span>
+            <h3>Master of Science in IT</h3>
+            <p>Sardar Patel University</p>
+        </div>
+
+        <div class="resume-item">
+            <span>2023</span>
+            <h3>Java Full Stack Developer</h3>
+            <p>Tata Strive, Anand</p>
+        </div>
+
+        <div class="resume-item">
+            <span>2021</span>
+            <h3>Bachelor of Computer Applications</h3>
+            <p>Sardar Patel University</p>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="image/Project1.jpg">
+                <div class="card-content">
+                    <h3>EduNexus</h3>
+                    <p>Online learning platform with course management.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="image/Project2.webp">
+                <div class="card-content">
+                    <h3>Shop Management System</h3>
+                    <p>Inventory and billing management system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-wrapper">
+
+            <div class="skill">
+                <div class="skill-name">HTML</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:90%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">CSS</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">NodeJS</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:70%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-name">C / C++</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width:65%"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-wrapper">
+            <div>
+                <p>I am passionate about web development and teaching.</p>
+                <p>
+                    I have completed my Master's in IT and currently working as an Assistant Professor.
+                    I enjoy creating modern web applications using MERN stack.
+                </p>
+
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+                <a href="Meet_Desai_CV.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="contact-wrapper">
+
+            <!-- <form class="site-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="tel" placeholder="Your Phone">
+                <textarea rows="5" placeholder="Message"></textarea>
+
+                <input type="submit" class="btn btn-primary" value="Send Message">
+            </form> -->
+
+            <ul class="site-contact-details">
+                <li><strong>Email:</strong> meetwork@gmail.com</li>
+                <li><strong>Phone:</strong> +91 XXXXX XXXXX</li>
+                <li><strong>Address:</strong> Anand, Gujarat, India</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Meet Desai | Portfolio
+    </footer>
+
+</body>
+
+</html>
