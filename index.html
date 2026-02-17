@@ -72,18 +72,33 @@
             width: 100%;
         }
 
-     .nav-links {
+        /* HERO */
+
+            /* .hero {
+                height: 100vh;
+                background:url('image/Meet_Pro1.jpeg') no-repeat center center/cover, 
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+                background-position: 0px 0px;
+                background-position: center -300px;
+                display: flex;
+                align-items: center;
+                padding-left: 8%;
+            } */
+/* .hero {
+    height: 100vh;
+    background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+                url('image/Meet_Pro.jpeg') no-repeat center center;
+    background-size: contain;   
+    background-color: #111;      
     display: flex;
     align-items: center;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
     color: white;
-}
-
+    padding-left: -8%;
+} */
 .hero {
     height: 100vh;
     display: flex;
@@ -264,7 +279,12 @@
             background: #222;
         }
 
-       
+        /* .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        } */
+
         .site-form input,
         .site-form textarea {
             width: 100%;
@@ -300,157 +320,47 @@
             padding: 20px;
         }
 
-/* =====================
-   NAVBAR LINKS DEFAULT
-===================== */
+        /* MOBILE */
 
-.nav-links {
-    display: flex;
-    align-items: center;
-}
+        /* @media(max-width:768px) {
 
-/* Hamburger Icon */
+            .intro h1 {
+                font-size: 40px;
+            }
 
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    color: white;
-}
-/* =====================
-   RESPONSIVE DESIGN
-===================== */
-
-@media (max-width: 992px) {
-
-    section {
-        padding: 60px 5%;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        height: auto;
-        padding-top: 120px;
-    }
-
-    .hero-left,
-    .hero-right {
-        width: 100%;
-    }
-
-    .hero-right img {
-        width: 70%;
-        margin-top: 30px;
-    }
-
-    .about-wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .intro h1 {
-        font-size: 45px;
-    }
-}
-
-
-/* Mobile Navbar + Layout */
-
-@media (max-width: 768px) {
-
-    nav {
-        padding: 0 5%;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: #000;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 0;
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        display: block;
-        margin: 15px 0;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 32px;
-    }
-
-    .intro h1 {
-        font-size: 38px;
-    }
-
-    .hero-right img {
-        width: 85%;
-    }
-}
-
-
-/* Small Mobile */
-
-@media (max-width: 480px) {
-
-    .intro h1 {
-        font-size: 30px;
-    }
-
-    .hero-right img {
-        width: 95%;
-    }
-
-    .btn {
-        padding: 10px 18px;
-        font-size: 14px;
-    }
-}
+            .about-wrapper,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        } */
     </style>
-  
-
 </head>
 
 <body>
 
     <!-- NAVBAR -->
 
-  <nav>
-    <h2>Meet</h2>
-
-    <div class="menu-toggle" id="menuToggle">☰</div>
-
-    <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#resume">Resume</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </div>
-</nav>
-
-
+    <nav>
+        <h2>Meet</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
     <!-- HERO -->
 
-   
+    <!-- <div class="hero" id="home">
+        <div class="intro">
+            <h1>I'm Meet Desai</h1>
+            <p>Passionate Full Stack Developer skilled in Java, Web Technologies, and building responsive modern
+                applications.</p>
+            <a href="#about" class="btn btn-primary">About Me</a>
+        </div>
+    </div> -->
     <div class="hero" id="home">
 
     <div class="hero-left">
@@ -466,7 +376,7 @@
     </div>
 
     <div class="hero-right">
-        <img src="Meet_Pro1.jpeg" alt="Meet Desai">
+        <img src="image/Meet_Pro1.jpeg" alt="Meet Desai">
     </div>
 
 </div>
@@ -502,7 +412,7 @@
 
         <div class="cards">
             <div class="card">
-                <img src="Project1.jpg">
+                <img src="image/Project1.jpg">
                 <div class="card-content">
                     <h3>EduNexus</h3>
                     <p>Online learning platform with course management.</p>
@@ -510,7 +420,7 @@
             </div>
 
             <div class="card">
-                <img src="Project2.webp">
+                <img src="image/Project2.webp">
                 <div class="card-content">
                     <h3>Shop Management System</h3>
                     <p>Inventory and billing management system.</p>
@@ -617,27 +527,7 @@
     <footer>
         © 2026 Meet Desai | Portfolio
     </footer>
-<script>
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-    });
-});
-</script>
 
 </body>
 
-
 </html>
-
-
-
-
-
